@@ -187,7 +187,12 @@ class Google extends EA_Controller {
                     continue; // Skip all day events
                 }
 
-                $results = $CI->appointments_model->get_batch(['id_google_calendar' => $google_event->getId()]);
+                // Customization: Allow the same gcal event to be on multiple librarians' calendars
+                // See https://github.com/alextselegidis/easyappointments/issues/733
+                $results = $CI->appointments_model->get_batch([
+                    'id_google_calendar' => $google_event->getId(),
+                    'id_users_provider' => $provider_id,
+                ]);
 
                 if ( ! empty($results))
                 {
