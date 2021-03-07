@@ -28,7 +28,7 @@ Then run `cd docker && docker-compose up -d`
 
 CircleCi builds the code as a tarball for every commit.  To deploy:
 
-    wget https://path-to-build.tar.gz
+    rm build.tar.gz && wget https://path-to-build.tar.gz
     tar xzvf build.tar.gz
     cp appointments.lbcc.linnlibraries.org/config.php build/config.php
     mv appointments.lbcc.linnlibraries.org old
