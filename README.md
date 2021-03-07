@@ -24,9 +24,18 @@ Copy config-default.php to config.php, and replace the BASE_URL and DB_HOST line
 
 Then run `cd docker && docker-compose up -d`
 
-## Make changes and build
+## Deploy
+
+CircleCi builds the code as a tarball for every commit.  To deploy:
+
+    wget https://path-to-build.tar.gz
+    tar xzvf build.tar.gz
+    cp appointments.lbcc.linnlibraries.org/config.php build/config.php
+    mv appointments.lbcc.linnlibraries.org old
+    mv build appointments.lbcc.linnlibraries.org
+
+If you ever wish to build manually, it's:
 
     npm run build
 
-Then, copy the build directory into place, maintaining the existing config.php
 
