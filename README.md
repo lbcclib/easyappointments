@@ -22,7 +22,7 @@ Copy config-default.php to config.php, and replace the BASE_URL and DB_HOST line
     const DB_HOST       = 'mysql';
 
 
-Then run `cd docker && docker-compose -d up`
+Then run `cd docker && docker-compose up -d`
 
 ## Make changes and build
 
