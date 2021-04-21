@@ -60,6 +60,10 @@
                 <td class="label" style="padding: 3px;font-weight: bold;"><?= lang('address') ?></td>
                 <td style="padding: 3px;"><?= $customer_address ?></td>
             </tr>
+            <tr>
+                <td class="label" style="padding: 3px;font-weight: bold;"><?= lang('city') ?></td>
+                <td style="padding: 3px;"><?= $customer_city ?></td>
+            </tr>
         </table>
 
         <h2><?= lang('appointment_link_title') ?></h2>

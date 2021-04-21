@@ -282,6 +282,7 @@
                             <div class="form-group">
                                 <label for="address" class="control-label">
                                     <?= lang('address') ?>
+                                    <span class="text-danger">*</span>
                                 </label>
                                 <input type="text" id="address" class="form-control" maxlength="120"/>
                             </div>
@@ -289,13 +290,10 @@
                                 <label for="city" class="control-label">
                                     <?= lang('city') ?>
                                 </label>
-                                <input type="text" id="city" class="form-control" maxlength="120"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="zip-code" class="control-label">
-                                    <?= lang('zip_code') ?>
-                                </label>
-                                <input type="text" id="zip-code" class="form-control" maxlength="120"/>
+                                <select id="city" class="form-control">
+                                  <option value="Phone"><?= lang('phone') ?></option>
+                                  <option value="Zoom">Zoom</option>
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="notes" class="control-label">
